@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diccionario Multimedios</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1> Diccionario Multimedios</h1>
+    <p>Busca términos del curso. Haz clic en uno para ver su definición.</p>
+  </header>
+
+  <main>
+    <!-- Buscador -->
+    <section class="search-section">
+      <input type="text" id="searchInput" placeholder="🔍 Buscar término..." autofocus />
+      <div class="filters">
+        <button data-filter="all" class="active">Todos</button>
+        <button data-filter="fundamentos">Fundamentos</button>
+        <button data-filter="git">Git</button>
+        <button data-filter="javascript">JavaScript</button>
+        <button data-filter="webcomponents">Web Components</button>
+        <button data-filter="css">CSS</button>
+        <button data-filter="rendimiento">Rendimiento</button>
+      </div>
+    </section>
+
+    <!-- Lista de términos -->
+    <section class="terms-list" id="termsList">
+      <!-- Los términos se renderizan desde JavaScript -->
+    </section>
+
+    <!-- Modal para detalles -->
+    <dialog id="termModal">
+      <button id="closeModal" aria-label="Cerrar">&times;</button>
+      <div id="modalContent">
+        <h2 id="modalTitle"></h2>
+        <div id="modalDefinition"></div>
+        <div id="modalCategory"></div>
+        <div id="modalContext"></div>
+      </div>
+    </dialog>
+  </main>
+
+
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
